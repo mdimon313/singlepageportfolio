@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/*
+    -----------> FONTS <----------
+
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    -----------> FONTS <----------
+
+ */
+
+ /* --------- global styles ----- */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+    font-size : 14px;
+    font-weight: 300;
+    min-height: 100vh;
+    vertical-align: middle;
+}
+.container {
+    /* width: 1170px; */
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+section {
+    padding: 5rem 0;
+}
+ul {
+    list-style-type: none;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+.clear-fix {
+    content: "";
+    clear: both;
+    display: block;
+}
+.col-3 {
+    width: 33.33%;
+    float: left;
+    padding: 0 15px;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.col-6 {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+}
+.col-12 {
+    width: 100%;
+    padding: 0 15px;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2  {
+    margin-bottom: 2rem;
+}
+.mb-3 {
+    margin-bottom: 3rem;
+}
+.mb-5 {
+    margin-bottom: 5rem;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===============> CUSTOM CSS <============== */
+
+/* ----------------> Header Start <---------------- */
+.header {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    /* background: rgba(0, 0, 0, 0.3) */
+}
+/* .nav {
+    width: 100%;
+    height: 60px;
+    line-height: 60px; 
+}*/
+.nav .nav-list {
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .nav-list .link-list {
+    display: block;
+    margin: 0 15px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+
+/* ----------------> Header End <---------------- */
+
+/* ---------------> Banner Start<------------------ */
+.banner {
+    background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../image/back1.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.banner-heading {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-heading h2 {
+    font-family: 'Lato';
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.banner-heading h1 {
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+/* ---------------> Banner End<------------------ */
+
+/* ---------------> Portfolio Start <--------------------- */
+
+.portfolio {
+    background: #222222;
+}
+
+.sec-title-head {
+    text-align: center;
+    overflow: hidden;
+}
+
+.sec-title-head h2 {
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sec-title-head h2 span {
+    color: rgb(255,255,255,0.6);
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+.sec-menu {
+    overflow: hidden;
+}
+
+.sec-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.sec-menu ul li a {
+    margin: 0 20px;
+    color: #afafaf;
+}
+.sec-menu ul li a.active, .sec-menu ul li a:hover {
+    color: #BAC964;
+}
+
+.portfolio-single-box {
+    overflow: hidden;
+}
+
+.portfolio-single-box .portfolio-img {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    transition: all .5s cubic-bezier(0, 0, 1, 1.38);
+}
+.portfolio-single-box .portfolio-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.3);
+    opacity: 0;
+    z-index: 9;
+    transition: all .5s ease-in-out;
+}
+.portfolio-single-box:hover .portfolio-img img {
+    transform: scale(1.1);
+    transition: all .5s ease-out;
+}
+.portfolio-single-box:hover .portfolio-img::before {
+    opacity: 1;
+}
+.portfolio-meta {
+    text-align: center;
+}
+
+.portfolio-meta h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #ddd;
+}
+.portfolio-meta h3 a {
+    color: #ddd;
+    transition: all .3s ease-in-out;
+}
+.portfolio-meta h3 a:hover {
+    color: #BAC964;
+}
+
+.portfolio-meta p {
+    color: #eee;
+    font-size: .9rem;
+}
+/* ---------------> Portfolio End <--------------------- */
+
+/* ---------------> My Resume Start <--------------------- */
+.resume {
+    background: #222222;
+}
+.box {
+    background: #333;
+    padding: 30px;
+    border-radius: 5px;
+}
+h4.resume-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Lato';
+}
+.box .date {
+    color: #fff;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.box .date i {
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.box h4 {
+    font-family: 'Lato';
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #bac964;
+}
+
+.box p {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.1rem;
+    font-family: 'Montserrat';
+    line-height: 25px;
+}
+
+.box cite {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: normal;
+    font-size: 1.1rem;
+}
+/* ---------------> My Resume End <--------------------- */
+
+/* ---------------> About Start <--------------------- */
+section.about {
+    background: #222;
+}
+
+.about-disc {
+    padding: 30px 40px 30px 40px;
+    overflow: hidden;
+}
+
+.about-disc h4 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Poppins';
+}
+
+.about-disc h4 span {
+    color: rgba(255,255,255,0.6);
+}
+.about-disc .about-para {
+    color: rgba(255,255,255,0.54);
+    line-height: 27px;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+.about-disc .about-para1 {
+    font-size: 1.8rem;
+    line-height: 30px;
+}
+.about-disc .about-para2 {
+    font-size: 1.2rem;
+}
+button.button {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+button.hire-btn {
+    background: #bac964;
+    color: #fff;
+    border: 1px solid #bac964;
+}
+button.hire-btn:hover {
+    background: transparent;
+}
+button.download-btn {
+    background: #6c757d;
+    color: #fff;
+    border: 1px solid #6c757d;
+}
+button.download-btn:hover {
+    background-color: #5A6268;
+    border: 1px solid #5A6268;
+}
+/* ---------------> About End <--------------------- */
+
+/* ---------------> Client Start <--------------------- */
+.client {
+    background: #222;
+}
+.client-testimonial-box {
+    display: flex;
+}
+
+.client-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.client-disc {
+    padding: 30px;
+    background: #333;
+    border-radius: 5px;
+    margin-left: 3rem;
+    position: relative;
+    box-shadow: 0 2px 30px -2px rgba(0, 0, 0, 0.1);
+}
+.client-disc::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: -15px;
+    background: #333;
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    transform: translate(-15%, -27%);
+}
+.client-disc blockquote {
+    color: rgba(255,255,255,0.3);
+    line-height: 26px;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.client-testimonial-box .client-name {
+    color:#666;
+    font-weight: 300;
+    font-family: 'Lato';
+    font-size: 14px;
+    padding-left: 30px;
+    position: relative;
+    
+}
+.client-testimonial-box .client-name::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-50%);
+}
+.client-testimonial-box .client-name a {
+    color: #bac964;
+    font-weight: 300;
+    font-family: 'Lato';
+    font-style: italic;
+}
+/* ---------------> Client End <--------------------- */
+
+/* ---------------> Service Start <--------------------- */
+.service {
+    background: #222;
+}
+.service-single-box {
+    overflow: hidden;
+    background: #333;
+    padding: 30px;
+    text-align: center;
+}
+.service-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #bac964;
+    margin-bottom: 2rem;
+}
+
+.service-icon i {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    font-size: 2.8rem;
+    color: #333;
+}
+.service-single-box h2 {
+    font-family: 'Lato';
+    font-weight: 300;
+    color: #fff;
+    font-size: 24px;
+}
+
+.service-single-box p {
+    font-family: 'Lato';
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+    font-size: 16px;
+    line-height: 29px;
+}
+.service-single-box .learn-more {
+    color: #bac964;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+}
+
+.service-single-box .learn-more i {
+    font-size: 17px;
+    margin-left: 5px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
+}
+.service-single-box .learn-more:hover i {
+    margin-left: 20px;
+}
+/* ---------------> Service End <--------------------- */
+
+
+/* ---------------> Blog Start <--------------------- */
+.blog {
+    background: #222;
+}
+.blog-image {
+    width: 350px;
+    height: 262px;
+}
+.blog-image img {
+    width: 100%;
+    height: 100%;
+}
+.blog-single-box {
+    background: #333;
+}
+
+.blog-single-box:hover {
+    box-shadow: 0 2px 30px -2px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+    transform: translateY(-3px);
+}
+
+.blog-discription {
+    padding: 30px;
+    overflow: hidden;
+}
+
+.blog-discription h2 {
+    font-size: 20px;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+.blog-discription h2 a {
+    color: #fff;
+}
+.blog-discription h2 a:hover {
+    color: #BAC964;
+}
+.blog-discription p {
+    font-family: 'Lato';
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    line-height: 23px;
+    font-size: 16px;
+}
+.blog-dates {
+    overflow: hidden;
+}
+
+.blog-dates .date, .blog-dates .comment {
+    color: rgba(255,255,255,0.5);
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.blog-dates .date i, .blog-dates .comment i {
+    margin-right: 6px;
+}
+.blog-dates .date:hover, .blog-dates .comment:hover,
+.blog-dates .date:hover i,
+.blog-dates .comment i:hover {
+    color: #BAC964;
+}
+
+/* ---------------> Blog End <--------------------- */
+
+/* ---------------> Contact Start <--------------------- */
+.contact {
+    background: #222;
+}
+
+.form h3 {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+.form form input {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    padding: 16px;
+    border-radius: 5px;
+    background: #333;
+    color: #ddd;
+}
+
+.form form input::placeholder,
+.form form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+.form form input:focus,
+.form form textarea:focus {
+    background: #404040;
+}
+
+.form form textarea {
+    display: block;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    padding: 25px 16px;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 16px;
+    color: #ddd;
+    resize: none;
+}
+button.send-msg {
+    padding: 16px 20px;
+    background: #bac964;
+    color: #fff;
+    border: 1px solid #bac964;
+    font-size: 12px;
+}
+button.send-msg:hover {
+    background: #a0af49;
+    border: 1px solid #a0af49;
+}
+
+.address {
+    overflow: hidden;
+    margin-left: 1rem;
+}
+
+.address span {
+    display: block;
+    line-height: 21px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.address span.address-heading {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #bac964;
+    margin-bottom: 5px;
+}
+/* ---------------> Contact End <--------------------- */
+
+/* ---------------> Footer Start <--------------------- */
+.footer {
+    padding: 5rem 0;
+    background: #222;
+}
+p.copy-right {
+    text-align: center;
+    color: rgb(179 179 179 / 61%);
+    font-size: 18px;
+    font-family: 'Lato';
+    font-weight: 300;
+}
+
+p.copy-right a {
+    color: rgb(186 201 100);
+}
+.social-icons {
+    width: 32%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.social-icons a i {
+    font-size: 23px;
+    color: #bac964;
+}
+.social-icons a:hover {
+    background: #2d2d2d;
+}
+
+
+/* ---------------> Footer End <--------------------- */
+
+
