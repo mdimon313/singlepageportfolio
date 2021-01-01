@@ -1,0 +1,52 @@
+@media (max-width: 1024px)   {
+    .col-3 {
+        width: 50%;
+    }
+    /* .col-6 {
+        width: 100%;
+    } */
+    .mid-mb-2 {
+        margin-bottom: 2rem;
+    }
+    .mid-mb-4 {
+        margin-bottom: 4rem;
+    }
+    /* !================== HEADER ======================= */
+    .banner-heading h2 {
+        font-size: 35px;
+    }
+    .banner-heading h1 {
+        font-size: 2.6rem;
+    }
+
+    /* ! =================== PORTFOLIO ================== */
+    .sec-menu {
+        margin: 0 auto;
+    }
+    .portfolio-single-box .portfolio-img {
+        margin: 0 auto;
+    }
+
+    /* !==================== BLOG ====================== */
+    .blog-discription h2 {
+        font-size: 18px;
+    }
+    /* ! ================== FOOTER ============ */
+    p.copy-right {
+        font size: 16px;
+    }
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        padding: 20px;
+    }
+    .social-icons a i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 662px) {
+    .col-3, .col-6 {
+        width: 100%;
+    }
+}
