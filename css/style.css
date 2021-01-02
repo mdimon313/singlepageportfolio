@@ -121,6 +121,7 @@ img {
     display: none;
     position: fixed;
     right: 5%;
+	cursor: pointer;
 }
 
 .fixed {
