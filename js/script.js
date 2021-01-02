@@ -7,7 +7,7 @@ showBtn.addEventListener("click", show);
 
 function show() {
     menu.style.left = "0 ";
-    showBtn.style.display = "none";
+    showBtn.style.zIndex = "-1";
     menu.style.visibility = "visible";
 }
 
@@ -15,7 +15,7 @@ closeBtn.addEventListener("click", close);
 
 function close() {
     menu.style.left = "-100% ";
-    showBtn.style.display = "block";
+    //showBtn.style.display = "block";
     menu.style.visibility = "hidden";
 }
 

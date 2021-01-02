@@ -122,6 +122,7 @@ img {
     position: fixed;
     right: 5%;
 	cursor: pointer;
+	user-select: none;
 }
 
 .fixed {

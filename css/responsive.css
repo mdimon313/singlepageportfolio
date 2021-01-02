@@ -12,13 +12,13 @@
     .toggleBtn {
         display: block;
         float: right;
-        z-index: 9;
     }
     .closeIcon {
         color: #fff;
         position: absolute;
         right: 5%;
         top: 0;
+		user-select: none;
     }
     .showIcon {
         display: block;
