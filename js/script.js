@@ -15,7 +15,6 @@ closeBtn.addEventListener("click", close);
 
 function close() {
     menu.style.left = "-100% ";
-    //showBtn.style.display = "block";
     menu.style.visibility = "hidden";
 }
 
@@ -23,6 +22,7 @@ function close() {
 window.addEventListener("scroll", ()=> {
     let header = document.querySelector("#header");
     let positionFixed = window.pageYOffset;
+    let listLink = document.querySelectorAll("li #link");
     if (100 < positionFixed) {
         header.classList.add("fixed");
     }
@@ -30,3 +30,10 @@ window.addEventListener("scroll", ()=> {
         header.classList.remove("fixed");
     }
 })
+
+// ! HIDE MENU WHEN CLICK ANY LINK
+//  let listLink = document.querySelectorAll("li #link");
+function hide_menu() {
+    menu.style.left = "-100%";
+}
+
